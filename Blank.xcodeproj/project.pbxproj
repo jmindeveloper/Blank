@@ -15,6 +15,8 @@
 		0E65081D29CF1583003D6315 /* BlankPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65081C29CF1583003D6315 /* BlankPDF.swift */; };
 		0E65081F29CF15E4003D6315 /* BlankPDFNavigationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65081E29CF15E4003D6315 /* BlankPDFNavigationCardView.swift */; };
 		0E65082229CF163F003D6315 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E65082129CF163F003D6315 /* Date+.swift */; };
+		0EAEDE0B29CF206600BA3924 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEDE0A29CF206600BA3924 /* Document.swift */; };
+		0EAEDE0F29CF21C900BA3924 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAEDE0E29CF21C900BA3924 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0E65081C29CF1583003D6315 /* BlankPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankPDF.swift; sourceTree = "<group>"; };
 		0E65081E29CF15E4003D6315 /* BlankPDFNavigationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankPDFNavigationCardView.swift; sourceTree = "<group>"; };
 		0E65082129CF163F003D6315 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		0EAEDE0A29CF206600BA3924 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		0EAEDE0E29CF21C900BA3924 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0E65081C29CF1583003D6315 /* BlankPDF.swift */,
+				0EAEDE0A29CF206600BA3924 /* Document.swift */,
+				0EAEDE0E29CF21C900BA3924 /* Constant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,8 +200,10 @@
 				0E65080A29CF017F003D6315 /* ContentView.swift in Sources */,
 				0E65082229CF163F003D6315 /* Date+.swift in Sources */,
 				0E65081929CF1526003D6315 /* NavigationSplitView.swift in Sources */,
+				0EAEDE0F29CF21C900BA3924 /* Constant.swift in Sources */,
 				0E65081F29CF15E4003D6315 /* BlankPDFNavigationCardView.swift in Sources */,
 				0E65080829CF017F003D6315 /* BlankApp.swift in Sources */,
+				0EAEDE0B29CF206600BA3924 /* Document.swift in Sources */,
 				0E65081D29CF1583003D6315 /* BlankPDF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NavigationSplitView: View {
+    
+    private let document = Document()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,18 +31,15 @@ struct NavigationSplitView: View {
             }
             .navigationTitle("내 파일")
             .toolbar {
-                NavigationLink {
-                    Text("파일선택")
+                Button {
+                    document.presentDocumentPicker()
                 } label: {
                     Image(systemName: "plus")
                         .foregroundColor(Color(.label))
                 }
-                
             }
         }
         .navigationViewStyle(.automatic)
-        
-
     }
 }
 
