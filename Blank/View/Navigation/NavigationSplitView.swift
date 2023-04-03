@@ -9,7 +9,8 @@ import SwiftUI
 
 struct NavigationSplitView: View {
     
-    private let document = Document()
+    @ObservedObject var document = Document()
+    
     
     var body: some View {
         NavigationView {
@@ -20,7 +21,7 @@ struct NavigationSplitView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     ForEach(dummyPDF, id: \.self) { pdf in
                         NavigationLink {
-                            Text("\(pdf.name)")
+                            Text(document.text)
                         } label: {
                             BlankPDFNavigationCardView(pdf: pdf)
                         }
