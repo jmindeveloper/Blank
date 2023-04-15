@@ -48,19 +48,3 @@ extension Document: UIDocumentPickerDelegate {
         openPDF(url: urls.first!)
     }
 }
-
-struct BlankPDFView: UIViewControllerRepresentable {
-    @State var pdfDocument: PDFDocument?
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        return BlankPDFViewController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        guard let pdfVC = uiViewController as? BlankPDFViewController else {
-            return
-        }
-        
-        pdfVC.pdfDocument = pdfDocument
-    }
-}
