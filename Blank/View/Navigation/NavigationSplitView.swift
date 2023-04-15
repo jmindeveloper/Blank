@@ -21,7 +21,7 @@ struct NavigationSplitView: View {
                 ScrollView(.vertical, showsIndicators: true) {
                     ForEach(dummyPDF, id: \.self) { pdf in
                         NavigationLink {
-                            Text(document.text)
+                            BlankPDFView(pdfDocument: document.document)
                         } label: {
                             BlankPDFNavigationCardView(pdf: pdf)
                         }
