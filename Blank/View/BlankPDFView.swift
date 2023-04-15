@@ -9,6 +9,7 @@ import UIKit
 import PDFKit
 import Combine
 import SnapKit
+import SwiftUI
 
 final class BlankPDFViewController: UIViewController {
     private lazy var pdfView: PDFView = {
@@ -130,5 +131,21 @@ final class BlankPDFViewController: UIViewController {
         if let document = pdfDocument {
             pdfView.document = document
         }
+    }
+}
+
+struct BlankPDFRepresentableView: UIViewControllerRepresentable {
+    @State var pdfDocument: PDFDocument?
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        return BlankPDFViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        guard let pdfVC = uiViewController as? BlankPDFViewController else {
+            return
+        }
+        
+        pdfVC.pdfDocument = pdfDocument
     }
 }
