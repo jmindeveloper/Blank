@@ -17,7 +17,7 @@ final class Document: NSObject, ObservableObject {
     private var readableContentTypes: [UTType] { [.pdf] }
     /// 쓰기타입
     private var writableContentTypes: [UTType] { [.pdf] }
-    @Published var text = ""
+    @Published var document: PDFDocument? = nil
     
     func presentDocumentPicker() {
         let picker = UIDocumentPickerViewController(forOpeningContentTypes: readableContentTypes)
@@ -29,8 +29,11 @@ final class Document: NSObject, ObservableObject {
     }
     
     func openPDF(url: URL) {
-        let pdfDocument = PDFDocument(url: url)
-        text = pdfDocument?.string ?? ""
+        if url.startAccessingSecurityScopedResource() {
+            let pdfDocument = PDFDocument(url: url)
+            document = pdfDocument
+            url.stopAccessingSecurityScopedResource()
+        }
     }
 }
 
@@ -41,6 +44,7 @@ extension Document: UIDocumentPickerDelegate {
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         print("url 가져오기 성공!! --> ",  urls.first!.lastPathComponent)
+        print(urls.first!)
         openPDF(url: urls.first!)
     }
 }
